@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matyag-Bolista</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/w3schools.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="container-fluid col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <img src="assets/images/logo.png">
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <center><h1 id = "playertitle">Players</h1></center>
+      <hr>
+      <div class="row">      
+        <div class="col-sm-12">
+          <div class="d-flex justify-content-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary p-2 bg-dark">Point Guard</button>
+              <button type="button" class="btn btn-secondary p-2 bg-dark">Shooting Guard</button>
+              <button type="button" class="btn btn-secondary p-2 bg-dark">Small Forward</button>
+              <button type="button" class="btn btn-secondary p-2 bg-dark">Power Forward</button>
+              <button type="button" class="btn btn-secondary p-2 bg-dark">Center</button>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- The Modal -->
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'"class="w3-button w3-display-topright" style="font-size: 52px;">&times;</span><br><br>
+          <nav class="navbar navbar-inverse visible-xs">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <img src="assets/images/Dingdong.jpg" style="height:150px; width:150px; border-radius:50%;">
+              </div>
+            </div>
+          </nav>
+
+          <div class="container-fluid">
+            <div class="row content">
+              <div class="col-sm-3 sidenav hidden-xs">
+                <h2>Kobe Bryant</h2>
+              </div>
+              <br>
+              
+              <div class="col-sm-9">
+                <h4>Kobe's Statistical Stats</h4>
+                <br><br>
+                <div class="dip" >     
+                  <p>Game Stats</p>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>PPG</h4>
+                      <p>25.0</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>RPG</h4>
+                      <p>5.2</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>APG</h4>
+                      <p>4.7</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Rating</h4>
+                      <p>95%</p> 
+                    </div>
+                  </div>
+                </div>
+                <br><br>
+                <div class="dip">
+                  <p>Physical Stats</p>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Height</h4>
+                      <p>6'6" (1.98m)</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Weight</h4>
+                      <p>212lbs (96kg)</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3"></div> <!--tabulation-->
+                  <div class="col-sm-3"></div> <!--tabulation-->
+                </div>
+                <br><br>
+                <div class="dip" >
+                  <p>Personal Information</p>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Birthdate</h4>
+                      <p>August 23, 1978</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Country</h4>
+                      <p>USA</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Draft Date</h4>
+                      <p>1996 R1 Pick 13</p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Experience</h4>
+                      <p>19 years</p> 
+                    </div>
+                  </div>
+                </div>
+                
+                <br><br>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="row"> 
+        <div class="col-md-4">
+          <div class="card">
+            <div class="content">
+              <h2>Kobe Bryant</h2>
+              <p>lorem ipsum dolor sit amet, consectet</p>
+              <a onclick="document.getElementById('id01').style.display='block'"
+              class="w3-button">View Profile</a>
+            </div>
+            <div class="image-jersey">
+              <img src="assets/images/jersey.png">
+              <div class="image-jersey">
+                <h3>BRYANT</h3>
+                <h1>24</h1>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+
+        <!--footer-->
+        <div class="col-md-12"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <span>
+            <p>All Copyright and license information is copyrighted by James Karl Sia @ https://github.com/yanijames3</p><br><br>
+          </span>
+        </div>
+        <!--footer ends-->
+
+      </div>
+    </div>
+  </body>
+  <script>
+        // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</html>
