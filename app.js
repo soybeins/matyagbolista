@@ -4,6 +4,8 @@ const express = require('express'),
     http = require('http');
     server = http.createServer(app),
     bodyParser = require('body-parser');
+const scout = require('./models/scout');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));  
@@ -14,11 +16,21 @@ app.use(session({
     resave: false,
     saveUninitialized: false    
 }));
+
 const scoutRoutes = require('./routes/scoutRoutes');
 const playerRoutes = require('./routes/playerRoutes');
 
 app.get("/", (req,res) => {
-    res.render("index");
+    if(req.session.uuid){
+        res.redirect("/player")
+    }else{
+        scout.model.findAll().then(scout =>{
+            res.render("index", {scout:scout});
+        }).catch(err => {
+            console.log(err);
+        })
+    }
+
 })
 
 app.get("/logout", (req,res)=>{

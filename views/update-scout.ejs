@@ -1,0 +1,63 @@
+<%- include('./partials/header.ejs') %>
+
+      <div class="originalCard text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
+        <div class="card-header">Edit Coach</div>
+        <div class="card-body">
+            <form action="/scout/edit_scout" method="post">
+                <div class="form-group">
+                <label for="formGroupExampleInput2">Username</label>
+                <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='username' value="<%= scout.username%>">
+
+                
+                  <label for="formGroupExampleInput">First Name</label>
+                  <input type="text" class="form-control bg-dark" id="formGroupExampleInput" name='firstname' value="<%= scout.firstname%>">              
+               
+                    <label for="formGroupExampleInput2">Last Name</label>
+                    <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='lastname' value="<%= scout.lastname%>" >
+         
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Recent Photo</label>
+                    <input type="url" class="form-control bg-dark" id="formGroupExampleInput2" name='photo' value="<%= scout.photo%>">
+       
+                    <label for="formGroupExampleInput2">School</label>
+                    <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='school' value="<%= scout.school%>">
+                 
+                    <label for="formGroupExampleInput2">Description</label>
+                    <textarea class="form-control bg-dark" id="formGroupExampleInput2" name="background" rows="4" cols="50">
+                        <%= scout.background%>
+                    </textarea>
+                </div><br>
+
+
+                <button class ="btn btn-primary"style="float: right;">Edit</button><br><br>
+            
+            </form>
+        </div>
+      </div>
+
+      <div class="row"> 
+        <!--footer-->
+        <div class="col-md-12"><br><br><br>
+          <span>
+            <p>All Copyright and license information is copyrighted by James Karl Sia @ https://github.com/yanijames3</p><br><br>
+          </span>
+        </div>
+        <!--footer ends-->
+      </div>
+    </div>
+  </body>
+  <script>
+        // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, closes it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</html>

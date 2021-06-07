@@ -34,6 +34,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      background: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
       school: {
         type: Sequelize.STRING,
         allowNull: false

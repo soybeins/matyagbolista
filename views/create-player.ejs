@@ -1,0 +1,78 @@
+<%- include('./partials/header.ejs') %>
+
+      <div class="originalCard text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
+        <div class="card-header">New Player</div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">First Name</label>
+                  <input type="text" class="form-control bg-dark" id="formGroupExampleInput" name='firstname' placeholder="Firstname" required>
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Middle Name</label>
+                  <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='middlename' placeholder="Middlename" required>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Last Name</label>
+                    <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='lastname' placeholder="Lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Position</label>
+                    <select class="form-control bg-dark" id="formGroupExampleInput">
+                        <label for="formGroupExampleInput2">Position</label>
+                        <option value=””>Point Guard</option>
+                        <option value=””>Power Forward</option>
+                        <option value=””>Small Forward</option>
+                        <option value=””>Shooting Guard</option>
+                        <option value=””>Center</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Height</label>
+                    <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='height' placeholder="Height" required>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Weight</label>
+                    <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='weight' placeholder="Weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Address</label>
+                    <input type="address" class="form-control bg-dark" id="formGroupExampleInput2" name='address' placeholder="Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Age</label>
+                    <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='age' placeholder="Age" required>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Rating</label>
+                    <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='rating' placeholder="Rating" required>
+                </div><br>
+                <button class ="btn btn-success"style="float: right;">Create Player</button><br><br>
+              </form>
+        </div>
+      </div>
+
+      <div class="row"> 
+        <!--footer-->
+        <div class="col-md-12"><br><br><br>
+          <span>
+            <p>All Copyright and license information is copyrighted by James Karl Sia @ https://github.com/yanijames3</p><br><br>
+          </span>
+        </div>
+        <!--footer ends-->
+      </div>
+    </div>
+  </body>
+  <script>
+        // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, closes it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</html>

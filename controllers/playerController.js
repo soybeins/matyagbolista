@@ -11,5 +11,18 @@ var generateCode = () => {
 }
 
 exports.display = (req,res) =>{
-    res.render('players');
+    if(req.session.uuid){
+        res.render('players',{username:req.session.username});
+    }else{
+        res.redirect("/");
+    }
 }
+
+exports.scout_edit = (req,res) =>{
+    if(req.session.uuid){
+        res.render('update-player',{username:req.session.username});
+    }else{
+        res.redirect("/");
+    }
+}
+

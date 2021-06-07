@@ -1,0 +1,101 @@
+<%- include('./partials/header.ejs') %>
+
+
+         <div class="card2">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="<%= scout.photo%>"
+                  alt="A man smiling"
+                />
+              </div>
+              <div class="card__name">
+                <h2><%= scout.firstname +" "+ scout.lastname %></h2>
+                <div class="card__handle">
+                  <span class="handle">@<%= scout.username%></span>
+                  <span class="circle"></span>
+                  <span class="category">Scout</span>
+                </div>
+              </div>
+              
+              <!-- edit -->
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="/scout/edit"><div class="card__button">
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-edit"
+                  >
+                    <path
+                      d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                    ></path>
+                    <path
+                      d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                    ></path>
+                  </svg>
+                  <span>Edit</span>
+                </button>
+              </div></a>
+
+            </div>
+
+
+            <hr class="border" />
+       
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>First Name : <%= scout.firstname%></h4>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Last Name : <%= scout.lastname%></h4>
+                </div>
+                <div class="col-sm-4">
+                    <h4> School : <%= scout.school%></h4>
+                </div>
+            </div>
+            <div class="card__insights">
+                <br><br>
+              <div class="card__heading">
+                <div class="heading">Background </div>
+                <div class="date">
+                  <%= new Date(); %>
+                </div>
+              </div>
+              <hr><br>
+              <div class="col"><%= scout.background%></div>
+              
+            </div>
+          </div>
+
+      <div class="row"> 
+        <!--footer-->
+        <div class="col-md-12">
+          <span>
+            <p>All Copyright and license information is copyrighted by James Karl Sia @ https://github.com/yanijames3</p><br><br>
+          </span>
+        </div>
+        <!--footer ends-->
+      </div>
+    </div>
+  </body>
+  <script>
+        // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</html>

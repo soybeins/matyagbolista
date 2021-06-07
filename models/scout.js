@@ -23,10 +23,14 @@ const scout = db.sequelize.define("scouts",{
         firstname: {
             type: DataTypes.STRING,
             allowNull: false
-          },
+        },
         lastname: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        background: {
+            type: DataTypes.STRING,
+            allowNull: true
           },
         username: {
             type: DataTypes.STRING,

@@ -13,11 +13,20 @@ var generateCode = () => {
 }
 
 exports.login = (req, res) => {
-    res.render("login");
+    if(req.session.username){
+        res.redirect("/player");
+    }else{
+        res.render("login");
+    }
+  
 }
 
 exports.register = (req, res) => {
-    res.render("register");
+    if(req.session.username){
+        res.redirect("/player");
+    }else{
+        res.render("register");
+    }
 }
 
 exports.register_scout = async (req,res) => {
@@ -63,4 +72,41 @@ exports.login_scout = async(req, res) => {
             }
         });    
     }
+}
+
+exports.profile = (req,res) => {
+    if(req.session.username){
+        scout.model.findOne({where:{username:req.session.username}}).then(data =>{
+            res.render('scout',{scout:data,username:req.session.username});
+        })
+    }else{
+        res.redirect("/");
+    }
+}
+
+exports.edit = (req,res) => {
+    if(req.session.username){
+        scout.model.findOne({where:{username:req.session.username}}).then(data =>{
+            res.render('update-scout',{scout:data,username:req.session.username});
+        })
+    }else{
+        res.redirect("/");
+    }
+}
+
+exports.edit_scout = async (req,res) => {
+    await scout.model.update({
+        username: req.body.username,
+        photo: req.body.photo,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        school: req.body.school,
+        background: req.body.background
+    },{where:{uuid:req.session.uuid}}).then(result =>{
+        if(result){
+            res.redirect("/scout/profile")
+        }
+    }).catch(err =>{
+        console.log(err);
+    })
 }

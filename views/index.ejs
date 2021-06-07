@@ -133,91 +133,30 @@
           </div>
         </div>
         <div class="row">
+
+			<% for(i=0 ; i< scout.length ; i++) { %>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/erik.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(<%=scout[i].photo%>)"></div>
 							</div>
 							<div class="text d-flex align-items-center pt-3 text-center">
 								<div>
-									<h3 class="mb-2"style="color: black;">Erik Spoelstra</h3>
-									<span class="position mb-4"style="color: black;">University of Visayas</span>
+									<h3 class="mb-2"style="color: black;"><%= scout[i].firstname %></h3>
+									<span class="position mb-4"style="color: black;"><%= scout[i].school %></span>
 									<div class="faded">
 										<ul class="ftco-social text-center">
-			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-			              </ul>
-		              </div>
-		            </div>
-							</div>
+											<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+											<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              				</ul>
+									</div>
+		             			</div>
+		            		</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/tab.jpg);"></div>
-							</div>
-							<div class="text d-flex align-items-center pt-3 text-center">
-								<div>
-									<h3 class="mb-2"style="color: black;">Tab Baldwin</h3>
-									<span class="position mb-4"style="color: black;">University of San Carlos</span>
-									<div class="faded">
-										<ul class="ftco-social text-center">
-			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-			              </ul>
-		              </div>
-		            </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/chot.jpg);"></div>
-							</div>
-							<div class="text d-flex align-items-center pt-3 text-center">
-								<div>
-									<h3 class="mb-2"style="color: black;">Chot Reyes</h3>
-									<span class="position mb-4"style="color: black;">Sacred Heart Ateneo</span>
-									<div class="faded">
-										<ul class="ftco-social text-center">
-			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-			              </ul>
-		              </div>
-		            </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/yeng.jpg);"></div>
-							</div>
-							<div class="text d-flex align-items-center pt-3 text-center">
-								<div>
-									<h3 class="mb-2"style="color: black;">Yeng Guiao</h3>
-									<span class="position mb-4"style="color: black;">University of Cebu</span>
-									<div class="faded">
-										<ul class="ftco-social text-center">
-			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-			              </ul>
-		              </div>
-		            </div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<% } %>
     	</div>
     </section> 
 
