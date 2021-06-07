@@ -110,3 +110,13 @@ exports.edit_scout = async (req,res) => {
         console.log(err);
     })
 }
+
+exports.delete = async(req,res) =>{
+    await scout.model.destroy({
+        where:{uuid:req.session.uuid}
+    }).then(result =>{
+        if(result){
+            res.redirect("/logout");
+        }
+    })
+}

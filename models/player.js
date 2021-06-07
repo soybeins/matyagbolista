@@ -47,11 +47,7 @@ const player = db.sequelize.define("players",{
         address: {
             type: DataTypes.STRING,
             allowNull: false
-          },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
+          }
     }, {
         createdAt: true,
         updatedAt: true,

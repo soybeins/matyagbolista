@@ -34,14 +34,15 @@
       </div>
 
     <!-- PLayer Modal -->
-    <div id="id01" class="w3-modal">
+    <% for(i=0;i < player.length ; i++) {%>
+    <div id="<%= player[i].id%>" class="w3-modal">
       <div class="w3-modal-content w3-card-4 w3-animate-opacity">
         <div class="w3-container">
-          <span onclick="document.getElementById('id01').style.display='none'"class="w3-button w3-display-topright" style="font-size: 52px;">&times;</span><br><br>
+          <span onclick="document.getElementById('<%= player[i].id%>').style.display='none'"class="w3-button w3-display-topright" style="font-size: 52px;">&times;</span><br><br>
           <nav class="navbar navbar-inverse visible-xs">
             <div class="container-fluid">
               <div class="navbar-header">
-                <img src="assets/images/Dingdong.jpg" style="height:150px; width:150px; border-radius:50%;">
+                <img src="<%=player[i].photo%>" style="height:150px; width:150px; border-radius:50%;">
               </div>
             </div>
           </nav>
@@ -49,42 +50,14 @@
           <div class="container-fluid">
             <div class="row content">
               <div class="col-sm-3 sidenav hidden-xs">
-                <h2>Kobe Bryant</h2>
+                <h2><%= player[i].firstname+" "+player[i].lastname%></h2>
               </div>
               <br>
               
               <div class="col-sm-9">
-                <h4>Kobe's Statistical Stats</h4>
+                <h2>More Information</h2>
                 <br><br>
-                <div class="dip" >     
-                  <p>Game Stats</p>
-                </div>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <div class="well">
-                      <h4>PPG</h4>
-                      <p>25.0</p> 
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="well">
-                      <h4>RPG</h4>
-                      <p>5.2</p> 
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="well">
-                      <h4>APG</h4>
-                      <p>4.7</p> 
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="well">
-                      <h4>Rating</h4>
-                      <p>95%</p> 
-                    </div>
-                  </div>
-                </div>
+              
                 <br><br>
                 <div class="dip">
                   <p>Physical Stats</p>
@@ -93,13 +66,25 @@
                   <div class="col-sm-3">
                     <div class="well">
                       <h4>Height</h4>
-                      <p>6'6" (1.98m)</p> 
+                      <p><%= player[i].height+" ft"%></p> 
                     </div>
                   </div>
                   <div class="col-sm-3">
                     <div class="well">
                       <h4>Weight</h4>
-                      <p>212lbs (96kg)</p> 
+                      <p><%= player[i].weight+" lbs"%></p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Position</h4>
+                      <p><%= player[i].position%></p> 
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="well">
+                      <h4>Overall Rating</h4>
+                      <p><%= player[i].rating+" pts."%></p> 
                     </div>
                   </div>
                   <div class="col-sm-3"></div> <!--tabulation-->
@@ -112,26 +97,14 @@
                 <div class="row">
                   <div class="col-sm-3">
                     <div class="well">
-                      <h4>Birthdate</h4>
-                      <p>August 23, 1978</p> 
+                      <h4>Age</h4>
+                      <p><%= player[i].age+" yrs. old"%></p> 
                     </div>
                   </div>
                   <div class="col-sm-3">
                     <div class="well">
-                      <h4>Country</h4>
-                      <p>USA</p> 
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="well">
-                      <h4>Draft Date</h4>
-                      <p>1996 R1 Pick 13</p> 
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="well">
-                      <h4>Experience</h4>
-                      <p>19 years</p> 
+                      <h4>From</h4>
+                      <p><%= player[i].address%></p> 
                     </div>
                   </div>
                 </div>
@@ -144,6 +117,7 @@
         </div>
       </div>
     </div>
+    <%}%>
     <!-- End of Player Modal -->
 
     <!-- CREATE PLAYER CARD -->
@@ -151,7 +125,7 @@
       <div class="col-md-4">
         <div class="card">
           <div class="content">
-            <a href="player_create" class="w3-button">CREATE PLAYER</a><br><br>
+            <a href="/player/create" class="w3-button">CREATE PLAYER</a><br><br>
             <p>Found talent? Potential Superstars? Click the button to create a player.</p>
            
           </div>
@@ -166,26 +140,39 @@
         </div>
       </div>
       <!-- PLAYER CARD -->
+      <% for(i=0;i < player.length ; i++) {%>
+
+        <script>
+        // Get the modal
+        var modal = document.getElementById('<%= player[i].id%>');
+  
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+             modal.style.display = "none";
+           }
+        }
+        </script>
 
         <div class="col-md-4">
           <div class="card">
             <div class="content">
-              <h2>Kobe Bryant</h2>
-              <p>lorem ipsum dolor sit amet, consectet</p>
-              <a onclick="document.getElementById('id01').style.display='block'"
-              class="w3-button">View Profile</a>
+              <a onclick="document.getElementById('<%= player[i].id%>').style.display='block'"
+                class="w3-button">View Profile</a>
+              <h2><%= player[i].firstname +" "+ player[i].lastname %></h2>
+              <p><%= "A " +player[i].age+ " year-old "+ player[i].position + " from " + player[i].address %></p>
             </div>
             <div class="image-jersey">
               <img src="assets/images/jersey.png">
               <div class="image-jersey">
-                <h3>BRYANT</h3>
-                <h1>24</h1>
+                <h3><%=player[i].lastname%></h3>
+                <h1><%=player[i].rating%></h1>
               </div>
             </div>
             
           </div>
         </div>
-
+        <% } %>
     </div>   
 
         <!--footer-->
@@ -199,16 +186,6 @@
       </div>
     </div>
   </body>
-  <script>
-        // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+  
 
 </html>
