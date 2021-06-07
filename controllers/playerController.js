@@ -1,3 +1,5 @@
+const player = require("../models/player");
+
 var generateCode = () => {
     let generate = "";
     const char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

@@ -16,6 +16,18 @@ const scout = db.sequelize.define("scouts",{
             type: DataTypes.STRING,
             allowNull: true,
         },
+        school:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        firstname: {
+            type: DataTypes.STRING,
+            allowNull: false
+          },
+        lastname: {
+            type: DataTypes.STRING,
+            allowNull: false
+          },
         username: {
             type: DataTypes.STRING,
             unique: true,

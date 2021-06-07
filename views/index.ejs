@@ -1,268 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>Matyag-Bolista Philippine Basketball Scouting App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+<!-- for icons and bootstrap theme by soy and james -->
+    <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">  
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/icomoon.css">
+	<!-- css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 
-  <title>Matyag-Bolista</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-</head>
-<style>
-    :root {
-    --baseColor: #606468;
-    }
 
-    /* helpers/align.css */
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand col-6" href="home.ejs">
+          <img src="/assets/images/logo-black.png" class="col-8">
+        </a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-    .align {
-    display: grid;
-    place-items: center;
-    }
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 
-    .grid {
-    inline-size: 90%;
-    margin-inline: auto;
-    max-inline-size: 20rem;
-    }
+	          <li class="nav-item"><a href="#scouts-section" class="nav-link"><span>Scouts</span></a></li>
 
-    /* helpers/hidden.css */
+             <li class="nav-item"><a href="/scout" class="nav-link"><span>Log-In</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider js-fullheight owl-carousel">
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third order-md-last img js-fullheight" style="background-image:url(assets/images/bg_1.jpg);">
+	          		<h3 class="vr" style="background-image: url(assets/images/divider.jpg);">Matyag</h3>
+	          	</div>
+		          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Welcome to the Club</span>
+			            <h1 class="mb-4 mt-3">Join<span> Philippines</span> No. <span>1</span> Scout <span>Agency</span></h1>
+			            <p>Discover some of the brightest and most talented Filipino ballers all around the country.</p>
+			            
+						<a href="/scout/register" class="btn btn-primary px-5 py-3 mt-3">Become a scout</a> &emsp;
+						<a href="/scout" class="btn btn-primary px-5 py-3 mt-3">I'm a scout</a>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
 
-    .hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    }
-
-    /* helpers/icon.css */
-
-    :root {
-    --iconFill: var(--baseColor);
-    }
-
-    .icons {
-    display: none;
-    }
-
-    .icon {
-    block-size: 1em;
-    display: inline-block;
-    fill: var(--iconFill);
-    inline-size: 1em;
-    vertical-align: middle;
-    }
-
-    /* layout/base.css */
-
-    :root {
-    --htmlFontSize: 100%;
-
-    --bodyBackgroundColor: #2c3338;
-    --bodyColor: var(--baseColor);
-    --bodyFontFamily: "Open Sans";
-    --bodyFontFamilyFallback: sans-serif;
-    --bodyFontSize: 0.875rem;
-    --bodyFontWeight: 400;
-    --bodyLineHeight: 1.5;
-    }
-
-    * {
-    box-sizing: inherit;
-    }
-
-    html {
-    box-sizing: border-box;
-    font-size: var(--htmlFontSize);
-    }
-
-    body {
-    background-color: var(--bodyBackgroundColor);
-    color: var(--bodyColor);
-    font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
-    font-size: var(--bodyFontSize);
-    font-weight: var(--bodyFontWeight);
-    line-height: var(--bodyLineHeight);
-    margin: 0;
-    min-block-size: 100vh;
-    }
-
-    /* modules/anchor.css */
-
-    :root {
-    --anchorColor: #eee;
-    }
-
-    a {
-    color: var(--anchorColor);
-    outline: 0;
-    text-decoration: none;
-    }
-
-    a:focus,
-    a:hover {
-        cursor: pointer;
-        color: grey;
-    }
-
-    /* modules/form.css */
-
-    :root {
-    --formGap: 0.875rem;
-    }
-
-    input {
-    background-image: none;
-    border: 0;
-    color: inherit;
-    font: inherit;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    transition: background-color 0.3s;
-    }
-
-    input[type="submit"] {
-    cursor: pointer;
-    }
-
-    .form {
-    display: grid;
-    gap: var(--formGap);
-    }
-
-    .form input[type="password"],
-    .form input[type="text"],
-    .form input[type="submit"] {
-    inline-size: 100%;
-    }
-
-    .form__field {
-    display: flex;
-    }
-
-    .form__input {
-    flex: 1;
-    }
-
-    /* modules/login.css */
-
-    :root {
-    --loginBorderRadus: 0.25rem;
-    --loginColor: #eee;
-
-    --loginInputBackgroundColor: #3b4148;
-    --loginInputHoverBackgroundColor: #434a52;
-
-    --loginLabelBackgroundColor: #363b41;
-    --loginSubmitBackgroundColor: rgb(175, 9, 9);
-    --loginSubmitColor: #eee;
-    --loginSubmitHoverBackgroundColor: #7a0606;
-    }
-
-    .login {
-    color: var(--loginColor);
-    }
-
-    .login label,
-    .login input[type="text"],
-    .login input[type="password"],
-    .login input[type="submit"] {
-    border-radius: var(--loginBorderRadus);
-    padding: 1rem;
-    }
-
-    .login label {
-    background-color: var(--loginLabelBackgroundColor);
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    padding-inline: 1.25rem;
-    }
-
-    .login input[type="password"],
-    .login input[type="text"] {
-    background-color: var(--loginInputBackgroundColor);
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    }
-
-    .login input[type="password"]:focus,
-    .login input[type="password"]:hover,
-    .login input[type="text"]:focus,
-    .login input[type="text"]:hover {
-    background-color: var(--loginInputHoverBackgroundColor);
-    }
-
-    .login input[type="submit"] {
-    background-color: var(--loginSubmitBackgroundColor);
-    color: var(--loginSubmitColor);
-    font-weight: 700;
-    text-transform: uppercase;
-    }
-
-    .login input[type="submit"]:focus,
-    .login input[type="submit"]:hover {
-    background-color: var(--loginSubmitHoverBackgroundColor);
-    }
-
-    /* modules/text.css */
-
-    p {
-    margin-block: 1.5rem;
-    }
-
-    .text--center {
-    text-align: center;
-    }
-</style>
-<body class="align">
-
-    <div class="grid">
-    
-    <center><h1>Login</h1></center>
-      <form action="/player" method="POST" class="form login">
-  
-        <div class="form__field">
-          <label for="login__username"><svg class="icon">
-              <use xlink:href="#icon-user"></use>
-            </svg><span class="hidden">Username</span></label>
-          <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third order-md-last img js-fullheight" style="background-image:url(assets/images/bg_2.jpg);">
+	          		<h3 class="vr" style="background-image: url(assets/images/divider.jpg);">Bolista</h3>
+	          	</div>
+		          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Welcome to the Club</span>
+			            <h1 class="mb-4 mt-3">Pain is <span>Temporary</span> But Glory is <span>Forever</span></h1>
+			            <p>Prove your worth to all Filipino basketball scouts for a brighter future in the basketball leauge.</p>
+			            
+						<a href="/scout/register" class="btn btn-primary px-5 py-3 mt-3">Become a scout</a> &emsp;
+						<a href="/scout" class="btn btn-primary px-5 py-3 mt-3">I'm a scout</a>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+		<!--Three Div Column  -->
+	<section class="ftco-section-2 ftco-services ftco-no-pt ftco-no-pb" style="background-color: black;">
+      <div class="container">
+        <div class="row no-gutters services-section">
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon"><span class="flaticon-body"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Coaching</h3>
+                <p>Get scouted by the top Coaches in the country. Prove your worth and be picked-up to rise to glory.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services services-2 text-center d-block">
+              <div class="icon"><span class="flaticon-diet"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Scouting</h3>
+                <p>Services are provided by the Scouting Federation of Central Visayas Region.</p>      
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon"><span class="flaticon-running"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Pro League</h3>
+                <p>Get a chance to be drafted by the PBA (Philippine Basketball Association) and play for your favourite team.</p>      
+              </div>
+            </div>      
+          </div>
         </div>
-  
-        <div class="form__field">
-          <label for="login__password"><svg class="icon">
-              <use xlink:href="#icon-lock"></use>
-            </svg><span class="hidden">Password</span></label>
-          <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
+      </div>
+    </section>
+
+
+    <section class="ftco-section" id="scouts-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-6 heading-section text-center ftco-animate">
+          	<span class="subheading" style="color: white;">Coaches</span>
+            <h2 class="mb-4">Our Scouts</h2>
+            <p style="color: black;">Meet the Scouts of <i>Matyag-Bolista</i> . Bonafide Experts in envisionary ocular inspection regards to Basketball.</p>
+          </div>
         </div>
-  
-        <div class="form__field">
-          <input type="submit" value="Sign In">
-        </div>
-  
-      </form>
-  
-      <p class="text--center">Not yet a scout? <a href="/scout/register_scout">Sign up now</a> <svg class="icon">
-          <use xlink:href="#icon-arrow-right"></use>
-        </svg></p>
-  
+        <div class="row">
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(assets/images/erik.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2"style="color: black;">Erik Spoelstra</h3>
+									<span class="position mb-4"style="color: black;">University of Visayas</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(assets/images/tab.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2"style="color: black;">Tab Baldwin</h3>
+									<span class="position mb-4"style="color: black;">University of San Carlos</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(assets/images/chot.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2"style="color: black;">Chot Reyes</h3>
+									<span class="position mb-4"style="color: black;">Sacred Heart Ateneo</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(assets/images/yeng.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2"style="color: black;">Yeng Guiao</h3>
+									<span class="position mb-4"style="color: black;">University of Cebu</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+				</div>
+    	</div>
+    </section> 
+
+    <div class="navbar-brand col-12" style="background-color: white; height:80px; margin-top: 10px;">
+      
+
     </div>
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" style="color: red;">About <span><a href="home.ejs" style="color: red;">Matyag-Bolista.</a></span></h2>
+              <p>We are community who seeks to help aspiring players and to make the life of our basketballs scouts easier and more convenient.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Question?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Narciso, Talamban, Cebu</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 234 5678 910</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">jksia.1000@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+
+          </div>
+        </div>
+      </div>
+    </footer>
+    
   
-    <svg xmlns="http://www.w3.org/2000/svg" class="icons">
-      <symbol id="icon-arrow-right" viewBox="0 0 1792 1792">
-        <path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
-      </symbol>
-      <symbol id="icon-lock" viewBox="0 0 1792 1792">
-        <path d="M640 768h512V576q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28H416q-40 0-68-28t-28-68V864q0-40 28-68t68-28h32V576q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" />
-      </symbol>
-      <symbol id="icon-user" viewBox="0 0 1792 1792">
-        <path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
-      </symbol>
-    </svg>
+
+  <!-- loader
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
+
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/jquery.animateNumber.min.js"></script>
+  <script src="assets/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="assets/js/google-map.js"></script>
   
+  <script src="assets/js/main.js"></script>
+    
   </body>
 </html>

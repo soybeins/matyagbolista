@@ -22,7 +22,7 @@ app.get("/", (req,res) => {
 })
 
 app.get("/logout", (req,res)=>{
-    res.session.destroy();
+    req.session.destroy();
     res.redirect("/");
 })
 

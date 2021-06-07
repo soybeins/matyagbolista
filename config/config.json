@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "matyag",
+    "database": "matyag-bolista",
     "host": "localhost",
     "dialect": "mysql"
   },
