@@ -1,54 +1,60 @@
 <%- include('./partials/header.ejs') %>
 
-      <div class="originalCard text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
+      <div class="originalCard text-white bg-dark mb-3 d-inline-block" style="max-width: 40rem;">
         <div class="card-header">Edit Player</div>
         <div class="card-body">
             <!-- FORM Start -->
             <form action="/player/player_update" method="post">
-
               <input type="hidden" name="id" value="<%= player.id%>" >
-
-                <div class="form-group">
+              <div class="row">
+                <div class="form-group col-sm-6">
                   <label for="formGroupExampleInput">First Name</label>
                   <input type="text" class="form-control bg-dark" id="formGroupExampleInput" name='firstname' value="<%= player.firstname%>" required>
                 </div>
        
-                <div class="form-group">
+                <div class="form-group col-sm-6">
                     <label for="formGroupExampleInput2">Last Name</label>
                     <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='lastname' value="<%= player.lastname%>" required>
                 </div>
-                <div class="form-group">
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-6">
+                  <label for="formGroupExampleInput2">Position</label>
+                  <select class="form-control bg-dark" value="<%= player.position%>" id="formGroupExampleInput">
                     <label for="formGroupExampleInput2">Position</label>
-                    <select class="form-control bg-dark" value="<%= player.position%>" id="formGroupExampleInput">
-                      <label for="formGroupExampleInput2">Position</label>
-                      <option value="Point Guard">Point Guard</option>
-                      <option value="Shooting Guard">Shooting Guard</option>
-                      <option value="Small Forward">Small Forward</option>
-                      <option value="Power Forward">Power Forward</option>
-                      <option value="Center">Center</option>
-                    </select>
+                    <option value="Point Guard">Point Guard</option>
+                    <option value="Shooting Guard">Shooting Guard</option>
+                    <option value="Small Forward">Small Forward</option>
+                    <option value="Power Forward">Power Forward</option>
+                    <option value="Center">Center</option>
+                  </select>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Height</label>
-                    <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='height' value="<%= player.height%>" required>
+                <div class="form-group col-sm-6">
+                  <label for="formGroupExampleInput2">Height</label>
+                  <input type="text" class="form-control bg-dark" id="formGroupExampleInput2" name='height' value="<%= player.height%>" required>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Weight</label>
-                    <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='weight' value="<%= player.weight%>" required>
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-6">
+                  <label for="formGroupExampleInput2">Weight</label>
+                  <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='weight' value="<%= player.weight%>" required>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Address</label>
-                    <input type="address" class="form-control bg-dark" id="formGroupExampleInput2" name='address' value="<%= player.address%>" required>
+                <div class="form-group col-sm-6">
+                  <label for="formGroupExampleInput2">Address</label>
+                  <input type="address" class="form-control bg-dark" id="formGroupExampleInput2" name='address' value="<%= player.address%>" required>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Age</label>
-                    <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='age' value="<%= player.age%>" required>
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-6">
+                  <label for="formGroupExampleInput2">Age</label>
+                  <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='age' value="<%= player.age%>" required>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Rating</label>
-                    <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='rating' value="<%= player.rating%>" required>
-                </div><br>
-                <button class ="btn btn-success"style="float: right;">Update Player</button><br><br>
+                <div class="form-group col-sm-6">
+                  <label for="formGroupExampleInput2">Rating</label>
+                  <input type="number" class="form-control bg-dark" id="formGroupExampleInput2" name='rating' value="<%= player.rating%>" required>
+                </div>
+              </div>
+                <br><button class ="btn btn-success"style="float: right;">Update Player</button><br><br>
               </form>
         </div>
       </div>
