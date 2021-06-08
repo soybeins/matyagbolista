@@ -95,7 +95,13 @@
                 </div>
               </div>
               <hr><br>
-              <div class="col"><%= scout.background%></div>
+              <div class="col">
+                <% if(scout.background == null) {%>
+                  You currently have no background. Please click on edit to make one.
+                <% } %>
+                <%= scout.background%>
+              
+              </div>
               
             </div>
           </div>

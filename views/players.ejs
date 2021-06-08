@@ -51,6 +51,10 @@
             <div class="row content">
               <div class="col-sm-3 sidenav hidden-xs">
                 <h2><%= player[i].firstname+" "+player[i].lastname%></h2>
+                <% if(player[i].uuid == uuid){ %>
+                <a href="/player/player_edit?id=<%= player[i].id%>"><button type="button" class="btn btn-primary">Edit Player</button></a><br><br>
+                <a href="/player/player_delete?id=<%= player[i].id%>"><button type="button" class="btn btn-danger">Delete Player</button></a>
+                <% }%>
               </div>
               <br>
               
