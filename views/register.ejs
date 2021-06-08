@@ -227,7 +227,7 @@
 
     <div class="grid">
       <center><h1 style="color:white">Register<h1></center>
-      <form action="/scout/register_scout" method="POST" class="form login">
+      <form action="/scout/register_scout" method="POST" class="form login" onsubmit="return checkForm(this);">
   
         <div class="form__field">
           <label for="login__username"><svg class="icon">
@@ -355,8 +355,6 @@
       form.password.focus();
       return false;
     }
-
-    alert("Sakto imong password buang (Pwede ra ni idelete): " + form.password.value);
     return true;
   }
 
