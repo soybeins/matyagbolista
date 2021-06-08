@@ -19,11 +19,11 @@
         <div class="col-sm-12">
           <div class="d-flex justify-content-center">
             <div class="btn-group" role="group" aria-label="Basic example">
-             <a href="/"> <button type="button" class="btn btn-secondary p-2 bg-dark">Point Guard</button></a>
-              <button type="button" class="btn btn-secondary p-2 bg-dark">Shooting Guard</button>
-              <button type="button" class="btn btn-secondary p-2 bg-dark">Small Forward</button>
-              <button type="button" class="btn btn-secondary p-2 bg-dark">Power Forward</button>
-              <button type="button" class="btn btn-secondary p-2 bg-dark">Center</button>
+              <a href="/player/display_position?pos=point+guard"> <button type="button" class="btn btn-secondary p-2 bg-dark">Point Guard</button></a>
+              <a href="/player/display_position?pos=shooting+guard"><button type="button" class="btn btn-secondary p-2 bg-dark">Shooting Guard</button></a>
+              <a href="/player/display_position?pos=small+forward"><button type="button" class="btn btn-secondary p-2 bg-dark">Small Forward</button></a>
+              <a href="/player/display_position?pos=power+forward"><button type="button" class="btn btn-secondary p-2 bg-dark">Power Forward</button></a>
+              <a href="/player/display_position?pos=center"><button type="button" class="btn btn-secondary p-2 bg-dark">Center</button></a>
               
               
               
@@ -130,7 +130,7 @@
            
           </div>
           <div class="image-jersey">
-            <img src="assets/images/jersey.png">
+            <img src="/assets/images/jersey.png">
             <div class="image-jersey">
               <h3>CREATE PLAYER</h3>
               <h1>00</h1>
@@ -141,9 +141,8 @@
       </div>
       <!-- PLAYER CARD -->
       <% for(i=0;i < player.length ; i++) {%>
-
+        <!-- MODAL SCRIPT for the player card -->
         <script>
-        // Get the modal
         var modal = document.getElementById('<%= player[i].id%>');
   
         // When the user clicks anywhere outside of the modal, close it
@@ -153,7 +152,7 @@
            }
         }
         </script>
-
+        <!-- PLAYER CARD DETAILS -->
         <div class="col-md-4">
           <div class="card">
             <div class="content">
@@ -163,7 +162,7 @@
               <p><%= "A " +player[i].age+ " year-old "+ player[i].position + " from " + player[i].address %></p>
             </div>
             <div class="image-jersey">
-              <img src="assets/images/jersey.png">
+              <img src="/assets/images/jersey.png">
               <div class="image-jersey">
                 <h3><%=player[i].lastname%></h3>
                 <h1><%=player[i].rating%></h1>
@@ -173,6 +172,7 @@
           </div>
         </div>
         <% } %>
+        <!-- END OF PLAYER CARD -->
     </div>   
 
         <!--footer-->
