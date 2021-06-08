@@ -3,7 +3,7 @@
 A basketball scouting app using Node JS and MVC Approach 
 
 Members:
-   Renzo P. Lebumfacil
+   Renzo P. Lebumfacil,
    James Karl Sia
 
 NPM Dependencies Installed:
